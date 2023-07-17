@@ -8,22 +8,8 @@ const App = () => {
   const [cells, setCells] = useState(["","","","","","","","",""])
   const [go, setGo] = useState("circle") 
   const [winningMessage, setWinningMessage] = useState(null)
-
   let message = `It is now ${go}'s go.`
-  
-  const checkAutoReset = () =>{
-    const emptyCellCount = cells.filter(cell => cell.length === 0).length;
-    if(!winningMessage && emptyCellCount === 0){
-      resetGame()
-    }
-  }
-  
-  const resetGame = () =>{
-    setCells(["","","","","","","","",""])
-    setGo("circle")
-    setWinningMessage(null)
-  }
-  
+
   const checkScore = () =>{
     const winningCombos = [[0,1,2], [3,4,5], [6,7,8],
                           [0,3,6], [1,4,7], [2,5,8],
@@ -41,12 +27,17 @@ const App = () => {
         setWinningMessage("Cross Wins!")
         return
       } 
-    })
+    })    
+  }
+
+  const resetGame = () =>{
+    setCells(["","","","","","","","",""])
+    setGo("circle")
+    setWinningMessage(null)
   }
 
   useEffect(() =>{
     checkScore()
-    checkAutoReset()
   ,[cells]})
   
   return (
