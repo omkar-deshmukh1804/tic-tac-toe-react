@@ -44,6 +44,5 @@ Just a curios dev.
 
 
 ## Screenshots
-
-![App Screenshot](https://drive.google.com/file/d/1PIHmcStYS_VIkb7GuQDGKmStTL09R7bh/view?usp=drive_link)
+![App Screenshot](https://github.com/omkar-deshmukh1804/tic-tac-toe-react/assets/58912751/1caadd87-1748-4ec2-ad22-553bcc26368f)
 
